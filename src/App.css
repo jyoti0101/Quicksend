@@ -1,38 +1,226 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap");
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Rubik";
+}
+h1 {
+  font-weight: normal;
+}
+.card-body {
+  padding: 1rem;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0 1em;
+}
+table tbody tr td:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+table tbody tr  td:last-child {
+  border-radius: 0 8px 8px 0;
+}
+.table tbody tr {
+  
+  outline: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+.table tbody td {
+  color: #161616;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 1.2rem 10px;
+  background-color: #fff;
+}
+.table thead th {
+  border: none;
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 13px;
+  color: #6f6f6f;
+  font-weight: normal;
+}
+.table td {
+  border: none !important;
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.badge {
+  border-radius: 12px;
+}
+.badge-info {
+  color: #0b6fd3;
+  background-color: #eaf4fe;
+}
+.badge-light {
+  color: #6f6f6f;
+  background: #f4f4f4;
+}
+.badge-success {
+  color: #26ba4d;
+  background: #eefcf2;
+}
+.form-control {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  height: 45px;
+}
+.greyClr {
+  color: #6f6f6f;
+}
+.btn-primary {
+  background-color: #0b6fd3;
+  border-radius: 44px;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
   pointer-events: none;
+  color: #aaa;
+  margin-top: 4px;
+}
+.form-control:focus {
+  border-color: 1px solid #e0e0e0;
+  outline: 0;
+  box-shadow: none;
+}
+/*Info Cards  */
+.infoCards {
+  color: #161616;
+}
+.infoCards .card-title {
+  font-size: 12px;
+}
+.cardLeft span {
+  font-size: 9px;
+}
+.cardLeft span:first-child {
+  color: #0b6fd3;
+}
+.cardLeft span {
+  color: #6f6f6f;
+}
+.cardLeft p {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.font10 {
+  font-size: 10px;
+}
+.font12 {
+  font-size: 12px;
+}
+.font14 {
+  font-size: 14px;
+}
+.user {
+  font-size: 12px;
+  color: #6f6f6f;
+}
+.user span {
+  color: #a8a8a8;
+  border-radius: 50px;
+  background: #fff7c2;
+  border: 1px solid #a8a8a8;
+  box-sizing: border-box;
+  border-radius: 32px;
+  padding: 8px;
+  text-align: center;
+  margin-left: 5px;
+}
+/* Side Navigation */
+.sidebar-container {
+  text-transform: uppercase;
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #268df4;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar-logo {
+  font-size: 30px;
+  padding: 40px 50px 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebar-navigation {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar-navigation li {
+  padding: 16px 16px 16px 24px;
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  line-height: 20px;
+  text-transform: capitalize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar-navigation li a {
+  padding: 10px 15px 10px 30px;
+  display: block;
+  color: #fff;
+}
+
+.sidebar-navigation li .fa {
+  margin-right: 10px;
+}
+
+.sidebar-navigation li a:active,
+.sidebar-navigation li a:hover,
+.sidebar-navigation li a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.sidebar-navigation li::before {
+  background-color: #0b6fd3;
+  position: absolute;
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 3px;
+  z-index: -1;
+}
+
+.sidebar-navigation li:hover::before {
+  width: 100%;
+}
+
+.sidebar-navigation .header {
+  background: #0b6fd3;
+  border-radius: 28px 0px 0px 28px;
+}
+
+.sidebar-navigation .header::before {
+  background-color: transparent;
+}
+
+.content-container {
+  padding-left: 220px;
 }
