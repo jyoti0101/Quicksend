@@ -50,6 +50,7 @@ table tbody tr  td:last-child {
   padding-bottom: 0;
 }
 .badge {
+  font-weight: normal;
   border-radius: 12px;
 }
 .badge-info {
