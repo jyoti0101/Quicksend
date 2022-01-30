@@ -176,6 +176,7 @@ table tbody tr  td:last-child {
   width: 100%;
   line-height: 20px;
   text-transform: capitalize;
+  margin: 5px 0;
 }
 
 .sidebar-navigation li a {
@@ -207,14 +208,14 @@ table tbody tr  td:last-child {
   border-radius: 28px 0px 0px 28px;
   z-index: -1;
 }
-.sidebar-navigation li:last-child
-{
-  margin-top: 150px;
-}
+
 .sidebar-navigation li:hover::before {
   width: 100%;
 }
-
+.sidebar-navigation li:last-child
+{
+  margin-top: 100px;
+}
 .sidebar-navigation .header {
   background: #0b6fd3;
   border-radius: 28px 0px 0px 28px;
