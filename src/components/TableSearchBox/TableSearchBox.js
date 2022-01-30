@@ -1,7 +1,13 @@
-import React from "react";
-// import search from "../assets/icons/search.svg"
+import React , {useState} from "react";
+import InvoiceTable from './../InvoiceTable/index';
+
 
 function TableSearchBox() {
+  const [search, setSearch] = useState('');
+  const handleSearch = (event) => {
+    setSearch(event.target.value);
+  };
+  
   return (
     <>
     <div className="row pt-5">
@@ -18,6 +24,7 @@ function TableSearchBox() {
             <input
               type="text"
               className="form-control"
+              onChange={handleSearch}
               placeholder="Search Invoices"
             />
           </div>
@@ -33,6 +40,7 @@ function TableSearchBox() {
           </div>
         </div>
       </div>
+      <InvoiceTable search={search}/>
     </>
   );
 }

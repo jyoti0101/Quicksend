@@ -1,6 +1,8 @@
 import React from "react";
 import InvoiceData from "./InvoiceData";
-function InvoiceTable() {
+function InvoiceTable(props) {
+  const {search}=props
+ 
   return (
     <>
     
@@ -16,7 +18,15 @@ function InvoiceTable() {
         </thead>
         <tbody>
           {InvoiceData &&
-            InvoiceData.map((item) => {
+          InvoiceData.filter((val)=>{
+            if(search=="")
+            {
+              return val
+            }
+            else if(val.InvoiceNumber.toLowerCase().includes(search.toLowerCase())){
+              return val
+            }
+          }).map((item) => {
               return (
                 <tr key={item.id}>
                   <td>{item.InvoiceNumber}</td>
