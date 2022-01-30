@@ -204,10 +204,13 @@ table tbody tr  td:last-child {
   top: 0;
   -webkit-transition: width 0.2s ease-in;
   transition: width 0.2s ease-in;
-  width: 3px;
+  border-radius: 28px 0px 0px 28px;
   z-index: -1;
 }
-
+.sidebar-navigation li:last-child
+{
+  margin-top: 150px;
+}
 .sidebar-navigation li:hover::before {
   width: 100%;
 }

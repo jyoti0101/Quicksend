@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "./Header";
-import InfoCards from "./InfoCards";
-import InvoiceTable from "./InvoiceTable";
+import Header from "./../Header/index";
+import InfoCards from "./../InfoCards/index";
+import InvoiceTable from "./../InvoiceTable/index";
 
-import TableSearchBox from "./TableSearchBox";
+import TableSearchBox from "./../TableSearchBox/index";
 function MainContainer() {
   return (
     <>

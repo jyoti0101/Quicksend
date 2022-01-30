@@ -1,12 +1,13 @@
 import React from "react";
+import SideNavbar from './../SideNavbar/index';
 
-import SideNavbar from "./SideNavbar";
+
 
 function PaymentPage() {
   return (
     <>
       <div className="container py-5">
-        <SideNavbar />
+       <SideNavbar/>
       </div>
     </>
   );
